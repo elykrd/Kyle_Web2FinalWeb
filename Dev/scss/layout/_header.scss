@@ -1,0 +1,88 @@
+/* =============
+    Header
+============= */
+
+header {
+  background-color: $lightpink;
+    display: grid;
+    grid-template-areas:
+    "burger ."
+    "nav nav";
+    grid-template-columns: 70% auto;
+    @include lg {
+        grid-template-areas: "nav .";
+        grid-template-columns: 70% auto;
+    }
+
+    // burger container
+    section:nth-child(1) {
+        align-items: center;
+        display: flex;
+        grid-area: burger;
+        justify-content: flex-start;
+        padding-left: 10px;
+        padding-bottom: 20px;
+        padding-top: 5px;
+        @include lg {
+            display: none;
+        }
+
+        button {
+          color: $white;
+          font-size: rem-calc(20);
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+    }
+    // nav container
+    nav {
+
+      display: none;
+      grid-area: nav;
+      @include lg{
+        display: flex !important;
+      }
+
+
+      ul{
+        @include lg {
+            display: flex !important;
+            flex-direction: row;
+        }
+      }
+
+
+      li{
+
+        padding-bottom: 15px;
+        padding-top: 20px;
+        padding-left: 20px;
+        font-family: 'PT Sans Narrow', sans-serif;
+        border-bottom: 2px solid $darkblue;
+
+        @include lg{
+          border-bottom: none;
+        }
+
+        &:last-child{
+          border-bottom: none;
+          padding-bottom: 30px;
+        }
+
+        a:link, a:visited{
+
+          color: $white;
+          font-size: rem-calc(18);
+        }
+
+        a:hover, a:active{
+
+          color: $darkblue;
+
+        }
+      }
+
+
+    }
+}

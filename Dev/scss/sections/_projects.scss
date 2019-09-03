@@ -1,0 +1,138 @@
+// projects
+
+#projects{
+ margin-top: 65px;
+
+
+ .projectscontainer{
+   @include md{
+     display: grid;
+     grid-template-columns: 33% auto auto;
+     grid-template-rows: 740px;
+   }
+
+   @include lg{
+     display: grid;
+     grid-template-columns: 25% 25% 25% 25%;
+     grid-template-rows: 740px;
+   }
+
+    #projectsheader{
+      @include md{
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        background-color: $white;
+        padding-right: 15px;
+        padding-left: 10px;
+        padding-top: 250px;
+
+        h1{
+          color: $darkblue;
+          font-size: rem-calc(37);
+        }
+      }
+      @include lg{
+        grid-column: 4 / 5;
+        grid-row: 1 / 2;
+        background-color: $lightpink;
+        padding-right: 15px;
+        padding-left: 10px;
+        padding-top: 250px;
+        margin-right: -10px;
+        h1{
+          color: $white;
+          font-size: rem-calc(37);
+        }
+      }
+    }
+
+ul{
+@include md{
+  margin-right: -10px;
+  a{
+    font-size: rem-calc(35);
+  }
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  background-color: $lightpink;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+@include lg{
+  margin-right: 120px;
+  a{
+    font-size: rem-calc(35);
+  }
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+  background-color: $white;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+}
+
+
+ }
+
+
+
+#projectsheader{
+  background-color: $lightpink;
+  padding: 20px 0;
+  margin-bottom: 65px;
+
+  h1{
+    font-family: 'Open Sans', sans-serif;
+    color: $white;
+    font-size: rem-calc(50);
+    padding-left: 10px;
+  }
+
+}
+
+li {
+font-family: 'Open Sans', sans-serif;
+margin-bottom: 15px;
+padding-bottom: 10px;
+border-bottom: 2px solid $darkpink;
+
+
+            a:link,
+            a:visited {
+                color: $darkblue;
+                @include md{
+                  color: $white;
+                }
+                @include lg{
+                  color: $darkblue;
+                }
+            }
+
+            a:hover{
+              color: $darkpink;
+              @include md{
+                color: $darkblue;
+              }
+              @include lg{
+                color: $darkpink;
+              }
+                }
+
+            a:active {
+              color: $darkpink;
+                }
+                @include lg{
+                  color: $darkpink;
+                }
+
+            &:last-child{
+              border-bottom: none;
+            }
+          }
+
+
+
+}

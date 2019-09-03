@@ -1,0 +1,13 @@
+#xlsize{
+width: auto;
+height: auto;
+
+@include xl{
+  display: grid;
+  grid-template-columns: auto 950px auto;
+
+  >div{
+    grid-column: 2 / 3;
+  }
+}
+}
